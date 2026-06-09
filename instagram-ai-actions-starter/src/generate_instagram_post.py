@@ -14,6 +14,7 @@ QUEUE_PATH = ROOT / "content" / "queue.yml"
 STATE_PATH = ROOT / "state" / "posts.json"
 OUTPUT_DIR = ROOT / "generated"
 
+
 def load_queue():
     with QUEUE_PATH.open("r", encoding="utf-8") as f:
         return yaml.safe_load(f)["posts"]
@@ -44,7 +45,7 @@ def choose_post(posts, state, post_id=None):
     for post in posts:
         if post["id"] not in generated_ids:
             return post
-    raise SystemExit("No unpublished prompts left in content/queue.yml")
+    raise SystemExit("No unused prompts left in content/queue.yml")
 
 
 def generate_image(post):
@@ -76,21 +77,15 @@ def main():
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     image_bytes = generate_image(post)
     image_path = OUTPUT_DIR / f"{post['id']}.png"
-    caption_path = OUTPUT_DIR / f"{post['id']}.txt"
-
     image_path.write_bytes(image_bytes)
-    caption_path.write_text(post["caption"].strip() + "\n", encoding="utf-8")
 
     public_base = os.environ["PUBLIC_ASSET_BASE_URL"].rstrip("/")
     record = {
         "id": post["id"],
         "topic": post.get("topic", ""),
         "image_path": str(image_path.relative_to(ROOT)).replace("\\", "/"),
-        "caption_path": str(caption_path.relative_to(ROOT)).replace("\\", "/"),
         "image_url": f"{public_base}/{post['id']}.png",
-        "caption": post["caption"].strip(),
         "generated_at": datetime.now(timezone.utc).isoformat(),
-        "published": False,
     }
 
     state["generated"] = [item for item in state["generated"] if item["id"] != post["id"]]
@@ -101,4 +96,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
