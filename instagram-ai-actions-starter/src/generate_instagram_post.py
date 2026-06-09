@@ -12,8 +12,7 @@ from openai import OpenAI
 ROOT = Path(__file__).resolve().parents[1]
 QUEUE_PATH = ROOT / "content" / "queue.yml"
 STATE_PATH = ROOT / "state" / "posts.json"
-OUTPUT_DIR = ROOT / "public" / "generated"
-
+OUTPUT_DIR = ROOT / "generated"
 
 def load_queue():
     with QUEUE_PATH.open("r", encoding="utf-8") as f:
