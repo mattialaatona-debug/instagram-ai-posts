@@ -1,80 +1,80 @@
 posts:
   - id: controversial-001
     topic: "La maggior parte delle persone non vuole libertà"
-    prompt: "A cinematic square editorial image about dependence disguised as safety, showing a luxurious but oppressive corporate office at night, one empty executive chair under a single hard light, dark business aesthetic, high contrast, cold atmosphere, subtle symbolism of invisible control, premium modern look, no readable text, no tiny details"
+    prompt: "A cinematic square editorial image about dependence disguised as safety, showing a luxurious but oppressive corporate office at night, one empty executive chair under a single hard light, dark business aesthetic, high contrast, cold atmosphere, subtle symbolism of invisible control. Include the exact headline text: MOST PEOPLE DO NOT WANT FREEDOM. The text must be large, bold, minimal, clean sans serif, highly legible, integrated into the composition, premium editorial layout, no extra text, no tiny text."
 
   - id: controversial-002
     topic: "Il mercato non premia il valore, premia la percezione"
-    prompt: "A cinematic square editorial image about perception controlling economic value, showing a luxury product on a pedestal in a dark room surrounded by shadowy observers, high contrast lighting, premium branding aesthetic, minimal composition, psychological tension, elegant and ruthless mood, no readable text, no tiny details"
+    prompt: "A cinematic square editorial image about perception controlling economic value, showing a luxury product on a pedestal in a dark room surrounded by shadowy observers, high contrast lighting, premium branding aesthetic, minimal composition, psychological tension, elegant and ruthless mood. Include the exact headline text: THE MARKET REWARDS PERCEPTION NOT VALUE. The text must be large, bold, minimal, clean sans serif, highly legible, integrated into the composition, premium editorial layout, no extra text, no tiny text."
 
   - id: controversial-003
     topic: "La disciplina batte il talento quasi sempre"
-    prompt: "A cinematic square editorial image about ruthless consistency, showing a dark minimalist training environment with one perfectly aligned object repeated in order, dramatic side lighting, high contrast, premium modern aesthetic, strong symbolism of repetition and control, no readable text, no tiny details"
+    prompt: "A cinematic square editorial image about ruthless consistency, showing a dark minimalist training environment with one perfectly aligned object repeated in order, dramatic side lighting, high contrast, premium modern aesthetic, strong symbolism of repetition and control. Include the exact headline text: DISCIPLINE BEATS TALENT MOST OF THE TIME. The text must be large, bold, minimal, clean sans serif, highly legible, integrated into the composition, premium editorial layout, no extra text, no tiny text."
 
   - id: controversial-004
-    topic: "Molti vogliono soldi, pochi vogliono responsabilità"
-    prompt: "A cinematic square editorial image about wealth and burden, showing a sharply dressed figure in shadow carrying a heavy metallic briefcase through a dark modern corridor, luxury finance aesthetic, high contrast lighting, minimal composition, powerful and tense mood, no readable text, no tiny details"
+    topic: "Molti vogliono soldi, pochi vogliono responsabilita'"
+    prompt: "A cinematic square editorial image about wealth and burden, showing a sharply dressed figure in shadow carrying a heavy metallic briefcase through a dark modern corridor, luxury finance aesthetic, high contrast lighting, minimal composition, powerful and tense mood. Include the exact headline text: EVERYONE WANTS MONEY FEW WANT RESPONSIBILITY. The text must be large, bold, minimal, clean sans serif, highly legible, integrated into the composition, premium editorial layout, no extra text, no tiny text."
 
   - id: controversial-005
     topic: "L'autostima senza risultati e' solo fantasia"
-    prompt: "A cinematic square editorial image about illusion versus reality, showing a mirror in a dark elegant room reflecting confidence while the surrounding environment suggests emptiness and tension, psychological symbolism, high contrast lighting, premium editorial style, no readable text, no tiny details"
+    prompt: "A cinematic square editorial image about illusion versus reality, showing a mirror in a dark elegant room reflecting confidence while the surrounding environment suggests emptiness and tension, psychological symbolism, high contrast lighting, premium editorial style. Include the exact headline text: CONFIDENCE WITHOUT RESULTS IS ONLY FANTASY. The text must be large, bold, minimal, clean sans serif, highly legible, integrated into the composition, premium editorial layout, no extra text, no tiny text."
 
   - id: controversial-006
     topic: "Il marketing vende identita', non prodotti"
-    prompt: "A cinematic square editorial image about identity and persuasion, showing a luxury display room with one object illuminated like a symbol of belonging, dark premium aesthetic, sharp composition, subtle tension, minimal but intense visual storytelling, no readable text, no tiny details"
+    prompt: "A cinematic square editorial image about identity and persuasion, showing a luxury display room with one object illuminated like a symbol of belonging, dark premium aesthetic, sharp composition, subtle tension, minimal but intense visual storytelling. Include the exact headline text: MARKETING SELLS IDENTITY NOT PRODUCTS. The text must be large, bold, minimal, clean sans serif, highly legible, integrated into the composition, premium editorial layout, no extra text, no tiny text."
 
   - id: controversial-007
     topic: "La poverta' mentale arriva prima di quella economica"
-    prompt: "A cinematic square editorial image about internal scarcity, showing a dark empty apartment with one expensive object placed meaninglessly in the center, cold lighting, high contrast, subtle symbolism of confusion and misplaced priorities, no readable text, no tiny details"
+    prompt: "A cinematic square editorial image about internal scarcity, showing a dark empty apartment with one expensive object placed meaninglessly in the center, cold lighting, high contrast, subtle symbolism of confusion and misplaced priorities. Include the exact headline text: POVERTY STARTS IN THE MIND FIRST. The text must be large, bold, minimal, clean sans serif, highly legible, integrated into the composition, premium editorial layout, no extra text, no tiny text."
 
   - id: controversial-008
     topic: "Chi evita il conflitto rinuncia quasi sempre al potere"
-    prompt: "A cinematic square editorial image about power and confrontation, showing two chairs facing each other in a dark boardroom with only one under direct light, sharp shadows, high contrast, premium business aesthetic, psychological tension, no readable text, no tiny details"
+    prompt: "A cinematic square editorial image about power and confrontation, showing two chairs facing each other in a dark boardroom with only one under direct light, sharp shadows, high contrast, premium business aesthetic, psychological tension. Include the exact headline text: IF YOU AVOID CONFLICT YOU LOSE POWER. The text must be large, bold, minimal, clean sans serif, highly legible, integrated into the composition, premium editorial layout, no extra text, no tiny text."
 
   - id: controversial-009
     topic: "La maggior parte dei consigli finanziari serve a mantenerti medio"
-    prompt: "A cinematic square editorial image about conformity in finance, showing a line of identical dark briefcases with one distinct premium case slightly separated, luxury finance mood, minimal composition, dramatic lighting, subtle symbolism of independence versus herd behavior, no readable text, no tiny details"
+    prompt: "A cinematic square editorial image about conformity in finance, showing a line of identical dark briefcases with one distinct premium case slightly separated, luxury finance mood, minimal composition, dramatic lighting, subtle symbolism of independence versus herd behavior. Include the exact headline text: MOST FINANCIAL ADVICE KEEPS YOU AVERAGE. The text must be large, bold, minimal, clean sans serif, highly legible, integrated into the composition, premium editorial layout, no extra text, no tiny text."
 
   - id: controversial-010
     topic: "Essere occupato e' spesso una forma elegante di codardia"
-    prompt: "A cinematic square editorial image about busyness as avoidance, showing a sleek executive desk crowded with perfectly arranged objects that still feels empty and tense, dark luxury aesthetic, cinematic side lighting, psychological symbolism, no readable text, no tiny details"
+    prompt: "A cinematic square editorial image about busyness as avoidance, showing a sleek executive desk crowded with perfectly arranged objects that still feels empty and tense, dark luxury aesthetic, cinematic side lighting, psychological symbolism. Include the exact headline text: BEING BUSY IS OFTEN DISGUISED FEAR. The text must be large, bold, minimal, clean sans serif, highly legible, integrated into the composition, premium editorial layout, no extra text, no tiny text."
 
   - id: controversial-011
     topic: "Molti imprenditori vogliono applausi, non rischio"
-    prompt: "A cinematic square editorial image about performative ambition, showing a luxury stage under bright light with no audience and one tense figure in shadow backstage, high contrast, premium business aesthetic, subtle symbolism of fragile ego and risk avoidance, no readable text, no tiny details"
+    prompt: "A cinematic square editorial image about performative ambition, showing a luxury stage under bright light with no audience and one tense figure in shadow backstage, high contrast, premium business aesthetic, subtle symbolism of fragile ego and risk avoidance. Include the exact headline text: MANY ENTREPRENEURS WANT APPLAUSE NOT RISK. The text must be large, bold, minimal, clean sans serif, highly legible, integrated into the composition, premium editorial layout, no extra text, no tiny text."
 
   - id: controversial-012
     topic: "Il denaro amplifica chi sei gia'"
-    prompt: "A cinematic square editorial image about money amplifying character, showing a polished dark room with one person split between shadow and light beside an open safe, luxury finance aesthetic, minimal composition, psychological tension, no readable text, no tiny details"
+    prompt: "A cinematic square editorial image about money amplifying character, showing a polished dark room with one person split between shadow and light beside an open safe, luxury finance aesthetic, minimal composition, psychological tension. Include the exact headline text: MONEY ONLY AMPLIFIES WHO YOU ALREADY ARE. The text must be large, bold, minimal, clean sans serif, highly legible, integrated into the composition, premium editorial layout, no extra text, no tiny text."
 
   - id: controversial-013
     topic: "La maggior parte delle persone confonde comfort con felicita'"
-    prompt: "A cinematic square editorial image about comfort as a trap, showing an expensive interior that feels emotionally cold and imprisoning, dramatic side lighting, dark luxury aesthetic, subtle symbolism of soft captivity, no readable text, no tiny details"
+    prompt: "A cinematic square editorial image about comfort as a trap, showing an expensive interior that feels emotionally cold and imprisoning, dramatic side lighting, dark luxury aesthetic, subtle symbolism of soft captivity. Include the exact headline text: COMFORT IS NOT THE SAME AS HAPPINESS. The text must be large, bold, minimal, clean sans serif, highly legible, integrated into the composition, premium editorial layout, no extra text, no tiny text."
 
   - id: controversial-014
     topic: "La crescita personale senza sacrificio e' intrattenimento"
-    prompt: "A cinematic square editorial image about fake self-improvement, showing a premium modern gym or studio that looks visually impressive but untouched and sterile, high contrast, sharp composition, subtle symbolism of performance without transformation, no readable text, no tiny details"
+    prompt: "A cinematic square editorial image about fake self-improvement, showing a premium modern gym or studio that looks visually impressive but untouched and sterile, high contrast, sharp composition, subtle symbolism of performance without transformation. Include the exact headline text: GROWTH WITHOUT SACRIFICE IS JUST ENTERTAINMENT. The text must be large, bold, minimal, clean sans serif, highly legible, integrated into the composition, premium editorial layout, no extra text, no tiny text."
 
   - id: controversial-015
     topic: "Essere simpatico spesso ti rende irrilevante"
-    prompt: "A cinematic square editorial image about approval versus influence, showing a dark executive dinner table with one place setting isolated under sharp light while the rest fades into shadow, premium aesthetic, psychological tension, no readable text, no tiny details"
+    prompt: "A cinematic square editorial image about approval versus influence, showing a dark executive dinner table with one place setting isolated under sharp light while the rest fades into shadow, premium aesthetic, psychological tension. Include the exact headline text: BEING LIKED CAN MAKE YOU IRRELEVANT. The text must be large, bold, minimal, clean sans serif, highly legible, integrated into the composition, premium editorial layout, no extra text, no tiny text."
 
   - id: controversial-016
     topic: "La vera leva economica e' saper influenzare percezione e comportamento"
-    prompt: "A cinematic square editorial image about influence as hidden leverage, showing a refined control room with screens casting cold light over a minimalist luxury space, dark editorial style, subtle symbolism of invisible power, no readable text, no tiny details"
+    prompt: "A cinematic square editorial image about influence as hidden leverage, showing a refined control room with screens casting cold light over a minimalist luxury space, dark editorial style, subtle symbolism of invisible power. Include the exact headline text: INFLUENCE IS THE HIGHEST ECONOMIC LEVER. The text must be large, bold, minimal, clean sans serif, highly legible, integrated into the composition, premium editorial layout, no extra text, no tiny text."
 
   - id: controversial-017
     topic: "Chi ha bisogno di essere capito raramente guida davvero"
-    prompt: "A cinematic square editorial image about leadership and distance, showing a lone figure at the head of a long dark boardroom table under a single focused beam of light, cold atmosphere, premium business aesthetic, no readable text, no tiny details"
+    prompt: "A cinematic square editorial image about leadership and distance, showing a lone figure at the head of a long dark boardroom table under a single focused beam of light, cold atmosphere, premium business aesthetic. Include the exact headline text: REAL LEADERS ARE RARELY FULLY UNDERSTOOD. The text must be large, bold, minimal, clean sans serif, highly legible, integrated into the composition, premium editorial layout, no extra text, no tiny text."
 
   - id: controversial-018
     topic: "Molte relazioni sono accordi di convenienza travestiti da affetto"
-    prompt: "A cinematic square editorial image about transactional relationships, showing two elegant glasses on opposite sides of a luxurious dark table with visible emotional distance, high contrast lighting, psychological symbolism, no readable text, no tiny details"
+    prompt: "A cinematic square editorial image about transactional relationships, showing two elegant glasses on opposite sides of a luxurious dark table with visible emotional distance, high contrast lighting, psychological symbolism. Include the exact headline text: MANY RELATIONSHIPS ARE JUST POLITE DEALS. The text must be large, bold, minimal, clean sans serif, highly legible, integrated into the composition, premium editorial layout, no extra text, no tiny text."
 
   - id: controversial-019
     topic: "La paura di perdere consenso ti rende manipolabile"
-    prompt: "A cinematic square editorial image about social approval as weakness, showing a dark room full of blurred figures while one sharply defined figure stands exposed in hard light, luxury editorial mood, subtle symbolism of pressure and conformity, no readable text, no tiny details"
+    prompt: "A cinematic square editorial image about social approval as weakness, showing a dark room full of blurred figures while one sharply defined figure stands exposed in hard light, luxury editorial mood, subtle symbolism of pressure and conformity. Include the exact headline text: FEAR OF DISAPPROVAL MAKES YOU EASY TO CONTROL. The text must be large, bold, minimal, clean sans serif, highly legible, integrated into the composition, premium editorial layout, no extra text, no tiny text."
 
   - id: controversial-020
     topic: "La maggior parte delle persone non fallisce: si autosabota con metodo"
-    prompt: "A cinematic square editorial image about structured self-sabotage, showing a premium minimalist workspace that appears perfect but contains one subtle destructive flaw at the center, high contrast lighting, dark business aesthetic, psychological tension, no readable text, no tiny details"
+    prompt: "A cinematic square editorial image about structured self-sabotage, showing a premium minimalist workspace that appears perfect but contains one subtle destructive flaw at the center, high contrast lighting, dark business aesthetic, psychological tension. Include the exact headline text: MOST PEOPLE SCALE THEIR OWN SELF SABOTAGE. The text must be large, bold, minimal, clean sans serif, highly legible, integrated into the composition, premium editorial layout, no extra text, no tiny text."
