@@ -45,4 +45,36 @@ posts:
 
   - id: controversial-012
     topic: "Il denaro amplifica chi sei gia'"
-    prompt: "A c
+    prompt: "A cinematic square editorial image about money amplifying character, showing a polished dark room with one person split between shadow and light beside an open safe, luxury finance aesthetic, minimal composition, psychological tension, no readable text, no tiny details"
+
+  - id: controversial-013
+    topic: "La maggior parte delle persone confonde comfort con felicita'"
+    prompt: "A cinematic square editorial image about comfort as a trap, showing an expensive interior that feels emotionally cold and imprisoning, dramatic side lighting, dark luxury aesthetic, subtle symbolism of soft captivity, no readable text, no tiny details"
+
+  - id: controversial-014
+    topic: "La crescita personale senza sacrificio e' intrattenimento"
+    prompt: "A cinematic square editorial image about fake self-improvement, showing a premium modern gym or studio that looks visually impressive but untouched and sterile, high contrast, sharp composition, subtle symbolism of performance without transformation, no readable text, no tiny details"
+
+  - id: controversial-015
+    topic: "Essere simpatico spesso ti rende irrilevante"
+    prompt: "A cinematic square editorial image about approval versus influence, showing a dark executive dinner table with one place setting isolated under sharp light while the rest fades into shadow, premium aesthetic, psychological tension, no readable text, no tiny details"
+
+  - id: controversial-016
+    topic: "La vera leva economica e' saper influenzare percezione e comportamento"
+    prompt: "A cinematic square editorial image about influence as hidden leverage, showing a refined control room with screens casting cold light over a minimalist luxury space, dark editorial style, subtle symbolism of invisible power, no readable text, no tiny details"
+
+  - id: controversial-017
+    topic: "Chi ha bisogno di essere capito raramente guida davvero"
+    prompt: "A cinematic square editorial image about leadership and distance, showing a lone figure at the head of a long dark boardroom table under a single focused beam of light, cold atmosphere, premium business aesthetic, no readable text, no tiny details"
+
+  - id: controversial-018
+    topic: "Molte relazioni sono accordi di convenienza travestiti da affetto"
+    prompt: "A cinematic square editorial image about transactional relationships, showing two elegant glasses on opposite sides of a luxurious dark table with visible emotional distance, high contrast lighting, psychological symbolism, no readable text, no tiny details"
+
+  - id: controversial-019
+    topic: "La paura di perdere consenso ti rende manipolabile"
+    prompt: "A cinematic square editorial image about social approval as weakness, showing a dark room full of blurred figures while one sharply defined figure stands exposed in hard light, luxury editorial mood, subtle symbolism of pressure and conformity, no readable text, no tiny details"
+
+  - id: controversial-020
+    topic: "La maggior parte delle persone non fallisce: si autosabota con metodo"
+    prompt: "A cinematic square editorial image about structured self-sabotage, showing a premium minimalist workspace that appears perfect but contains one subtle destructive flaw at the center, high contrast lighting, dark business aesthetic, psychological tension, no readable text, no tiny details"
