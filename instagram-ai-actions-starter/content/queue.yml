@@ -1,0 +1,21 @@
+posts:
+  - id: focus-001
+    topic: "Sistemi semplici battono motivazione intermittente"
+    prompt: "A refined editorial square image about calm productivity systems, a tidy desk, morning light, subtle visual metaphor of small repeatable actions compounding over time. No readable text."
+    caption: |
+      I sistemi semplici vincono perche' riducono l'attrito.
+
+      Non devi ricordarti di essere costante: devi costruire un percorso dove la prossima azione e' ovvia.
+
+      #produttivita #abitudini #focus
+
+  - id: ai-ops-001
+    topic: "Automazioni AI leggere"
+    prompt: "A clean modern square image showing a lightweight automation pipeline for creators, calendar cards, image thumbnails, and a small approval checkmark. Premium SaaS editorial style. No readable text."
+    caption: |
+      Una buona automazione non deve fare tutto.
+
+      Deve togliere il lavoro ripetitivo e lasciare a te la decisione finale quando conta.
+
+      #ai #automation #creatorworkflow
+
