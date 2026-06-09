@@ -58,7 +58,7 @@ def generate_image(post):
         model=model,
         prompt=prompt,
         size="1024x1024",
-        quality="low",
+        quality="high",
         n=1,
     )
     image_b64 = result.data[0].b64_json
