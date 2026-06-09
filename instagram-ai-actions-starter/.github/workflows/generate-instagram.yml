@@ -1,4 +1,4 @@
-name: Generate Instagram post
+name: Generate Instagram image
 
 on:
   workflow_dispatch:
@@ -27,9 +27,6 @@ jobs:
       PUBLIC_ASSET_BASE_URL: ${{ secrets.PUBLIC_ASSET_BASE_URL }}
       TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
       TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-      AUTO_PUBLISH: ${{ vars.AUTO_PUBLISH || 'false' }}
-      IG_USER_ID: ${{ secrets.IG_USER_ID }}
-      IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
     steps:
       - uses: actions/checkout@v4
 
@@ -41,20 +38,16 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Generate asset and caption
+      - name: Generate image asset
         run: python src/generate_instagram_post.py --post-id "${{ inputs.post_id }}"
 
-      - name: Commit generated post
+      - name: Commit generated image
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/generated state/posts.json
-          git diff --cached --quiet || git commit -m "Generate Instagram post"
+          git add generated state/posts.json
+          git diff --cached --quiet || git commit -m "Generate Instagram image"
           git push
 
       - name: Send Telegram preview
         run: python src/telegram_preview.py
-
-      - name: Publish automatically when enabled
-        if: env.AUTO_PUBLISH == 'true'
-        run: python src/publish_instagram.py --latest
