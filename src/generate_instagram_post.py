@@ -51,7 +51,7 @@ def choose_post(posts, state, post_id=None):
 def generate_image(post):
     client = OpenAI()
     style = os.getenv("BRAND_STYLE", "")
-    model = os.getenv("OPENAI_IMAGE_MODEL", "gpt-image-1")
+    model = os.getenv("OPENAI_IMAGE_MODEL", "gpt-image-2")
     prompt = f"{post['prompt']}\n\nBrand style: {style}\nFormat: square Instagram feed post, polished, no small text."
 
     result = client.images.generate(
