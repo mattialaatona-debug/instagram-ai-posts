@@ -1,8 +1,48 @@
 posts:
-  - id: focus-001
-    topic: "Sistemi semplici battono motivazione intermittente"
-    prompt: "A refined editorial square image about calm productivity systems, a tidy desk, morning light, subtle visual metaphor of small repeatable actions compounding over time. No readable text."
+  - id: controversial-001
+    topic: "La maggior parte delle persone non vuole libertà"
+    prompt: "A cinematic square editorial image about dependence disguised as safety, showing a luxurious but oppressive corporate office at night, one empty executive chair under a single hard light, dark business aesthetic, high contrast, cold atmosphere, subtle symbolism of invisible control, premium modern look, no readable text, no tiny details"
 
-  - id: ai-ops-001
-    topic: "Automazioni AI leggere"
-    prompt: "A clean modern square image showing a lightweight automation pipeline for creators, calendar cards, image thumbnails, and a small approval checkmark. Premium SaaS editorial style. No readable text."
+  - id: controversial-002
+    topic: "Il mercato non premia il valore, premia la percezione"
+    prompt: "A cinematic square editorial image about perception controlling economic value, showing a luxury product on a pedestal in a dark room surrounded by shadowy observers, high contrast lighting, premium branding aesthetic, minimal composition, psychological tension, elegant and ruthless mood, no readable text, no tiny details"
+
+  - id: controversial-003
+    topic: "La disciplina batte il talento quasi sempre"
+    prompt: "A cinematic square editorial image about ruthless consistency, showing a dark minimalist training environment with one perfectly aligned object repeated in order, dramatic side lighting, high contrast, premium modern aesthetic, strong symbolism of repetition and control, no readable text, no tiny details"
+
+  - id: controversial-004
+    topic: "Molti vogliono soldi, pochi vogliono responsabilità"
+    prompt: "A cinematic square editorial image about wealth and burden, showing a sharply dressed figure in shadow carrying a heavy metallic briefcase through a dark modern corridor, luxury finance aesthetic, high contrast lighting, minimal composition, powerful and tense mood, no readable text, no tiny details"
+
+  - id: controversial-005
+    topic: "L'autostima senza risultati e' solo fantasia"
+    prompt: "A cinematic square editorial image about illusion versus reality, showing a mirror in a dark elegant room reflecting confidence while the surrounding environment suggests emptiness and tension, psychological symbolism, high contrast lighting, premium editorial style, no readable text, no tiny details"
+
+  - id: controversial-006
+    topic: "Il marketing vende identita', non prodotti"
+    prompt: "A cinematic square editorial image about identity and persuasion, showing a luxury display room with one object illuminated like a symbol of belonging, dark premium aesthetic, sharp composition, subtle tension, minimal but intense visual storytelling, no readable text, no tiny details"
+
+  - id: controversial-007
+    topic: "La poverta' mentale arriva prima di quella economica"
+    prompt: "A cinematic square editorial image about internal scarcity, showing a dark empty apartment with one expensive object placed meaninglessly in the center, cold lighting, high contrast, subtle symbolism of confusion and misplaced priorities, no readable text, no tiny details"
+
+  - id: controversial-008
+    topic: "Chi evita il conflitto rinuncia quasi sempre al potere"
+    prompt: "A cinematic square editorial image about power and confrontation, showing two chairs facing each other in a dark boardroom with only one under direct light, sharp shadows, high contrast, premium business aesthetic, psychological tension, no readable text, no tiny details"
+
+  - id: controversial-009
+    topic: "La maggior parte dei consigli finanziari serve a mantenerti medio"
+    prompt: "A cinematic square editorial image about conformity in finance, showing a line of identical dark briefcases with one distinct premium case slightly separated, luxury finance mood, minimal composition, dramatic lighting, subtle symbolism of independence versus herd behavior, no readable text, no tiny details"
+
+  - id: controversial-010
+    topic: "Essere occupato e' spesso una forma elegante di codardia"
+    prompt: "A cinematic square editorial image about busyness as avoidance, showing a sleek executive desk crowded with perfectly arranged objects that still feels empty and tense, dark luxury aesthetic, cinematic side lighting, psychological symbolism, no readable text, no tiny details"
+
+  - id: controversial-011
+    topic: "Molti imprenditori vogliono applausi, non rischio"
+    prompt: "A cinematic square editorial image about performative ambition, showing a luxury stage under bright light with no audience and one tense figure in shadow backstage, high contrast, premium business aesthetic, subtle symbolism of fragile ego and risk avoidance, no readable text, no tiny details"
+
+  - id: controversial-012
+    topic: "Il denaro amplifica chi sei gia'"
+    prompt: "A c
