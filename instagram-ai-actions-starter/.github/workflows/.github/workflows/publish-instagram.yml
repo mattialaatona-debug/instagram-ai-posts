@@ -1,10 +1,10 @@
-name: Publish approved Instagram post
+name: Resend Telegram preview
 
 on:
   workflow_dispatch:
     inputs:
       post_id:
-        description: Generated post id to publish
+        description: Generated post id to send again on Telegram
         required: true
         type: string
 
@@ -12,11 +12,9 @@ permissions:
   contents: read
 
 jobs:
-  publish:
+  resend:
     runs-on: ubuntu-latest
     env:
-      IG_USER_ID: ${{ secrets.IG_USER_ID }}
-      IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
       TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
       TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
     steps:
@@ -30,5 +28,5 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Publish selected post
-        run: python src/publish_instagram.py --post-id "${{ inputs.post_id }}"
+      - name: Send selected post again
+        run: python src/telegram_preview.py --post-id "${{ inputs.post_id }}"
