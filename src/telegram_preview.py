@@ -45,16 +45,20 @@ def main():
         ]
     }
 
-    response = requests.post(
-        f"https://api.telegram.org/bot{token}/sendPhoto",
-        data={
-            "chat_id": chat_id,
-            "photo": post["image_url"],
-            "caption": caption[:1024],
-            "reply_markup": json.dumps(reply_markup),
-        },
-        timeout=60,
-    )
+    image_file = ROOT / post["image_path"]
+
+    with image_file.open("rb") as photo:
+        response = requests.post(
+            f"https://api.telegram.org/bot{token}/sendPhoto",
+            data={
+                "chat_id": chat_id,
+                "caption": caption[:1024],
+                "reply_markup": json.dumps(reply_markup),
+            },
+            files={"photo": photo},
+            timeout=60,
+        )
+
     if not response.ok:
         raise SystemExit(f"Telegram error {response.status_code}: {response.text}")
 
