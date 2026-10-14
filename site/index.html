@@ -1,0 +1,1246 @@
+<title>Mattia La Tona</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Dark-first: luxury consulting — warm blacks, amber gold, structured grid */
+:root {
+  --bg: #0a0a08;
+  --surface: #141410;
+  --surface-raised: #1c1c17;
+  --fg: #e8e4dc;
+  --fg-muted: #9a958c;
+  --fg-dim: #6b6760;
+  --accent: #d4a342;
+  --accent-light: #f0cc6e;
+  --accent-glow: #d4a34218;
+  --success: #4aba7a;
+  --success-dim: #1a3328;
+  --border: #2a2924;
+  --border-accent: #d4a34233;
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 32px;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: #faf8f4;
+    --surface: #f0ede6;
+    --surface-raised: #e8e4db;
+    --fg: #1a1916;
+    --fg-muted: #6b675e;
+    --fg-dim: #9a968d;
+    --accent: #b8872e;
+    --accent-light: #d4a342;
+    --accent-glow: #d4a34212;
+    --success: #2d8f58;
+    --success-dim: #dff0e6;
+    --border: #ddd9d0;
+    --border-accent: #d4a34230;
+    color-scheme: light;
+  }
+}
+:root[data-theme="light"] {
+  --bg: #faf8f4;
+  --surface: #f0ede6;
+  --surface-raised: #e8e4db;
+  --fg: #1a1916;
+  --fg-muted: #6b675e;
+  --fg-dim: #9a968d;
+  --accent: #b8872e;
+  --accent-light: #d4a342;
+  --accent-glow: #d4a34212;
+  --success: #2d8f58;
+  --success-dim: #dff0e6;
+  --border: #ddd9d0;
+  --border-accent: #d4a34230;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; margin: 0 }
+html { scroll-behavior: smooth }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0;
+  -webkit-font-smoothing: antialiased;
+}
+.serif { font-family: 'Instrument Serif', Georgia, serif }
+.mono { font-family: 'JetBrains Mono', monospace }
+
+/* Layout shell */
+.page { max-width: 680px; margin: 0 auto; }
+.section { padding: 80px 0; }
+@media (max-width: 520px) { .section { padding: 56px 0; } }
+
+/* ── HERO ── */
+.hero {
+  padding: 72px 0 48px;
+  text-align: center;
+  position: relative;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -40px; left: 50%;
+  width: 600px; height: 600px;
+  transform: translateX(-50%);
+  background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+  pointer-events: none;
+}
+.brand-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 64px;
+  position: relative;
+}
+.brand-name {
+  font: 700 11px/1 'Inter', sans-serif;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+.brand-role {
+  font: 500 10px/1 'JetBrains Mono', monospace;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+}
+.hero h1 {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: clamp(40px, 8vw, 62px);
+  font-weight: 400;
+  line-height: 1.04;
+  letter-spacing: -0.5px;
+  text-wrap: balance;
+  margin-bottom: 28px;
+  color: var(--fg);
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--accent);
+}
+.hero-sub {
+  font-size: clamp(16px, 3.2vw, 19px);
+  line-height: 1.65;
+  color: var(--fg-muted);
+  max-width: 500px;
+  margin: 0 auto 48px;
+  text-wrap: pretty;
+}
+.availability-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 28px;
+  padding: 8px 18px;
+  border-radius: 100px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  color: var(--fg-muted);
+  text-transform: uppercase;
+}
+.availability-badge .pulse-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 0 var(--accent);
+  animation: pulse-ring 2s ease-in-out infinite;
+}
+@keyframes pulse-ring {
+  0%, 100% { box-shadow: 0 0 0 0 transparent; opacity: 0.6 }
+  50% { box-shadow: 0 0 0 6px transparent; opacity: 1 }
+}
+
+/* ── BUTTON ── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 440px;
+  min-height: 62px;
+  padding: 0 32px;
+  border: none;
+  border-radius: var(--radius-md);
+  background: var(--accent);
+  color: #0a0a08;
+  font: 700 16px/1 'Inter', sans-serif;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 4px 24px var(--accent-glow), 0 1px 0 #00000020;
+}
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 32px var(--accent-glow), 0 2px 0 #00000020;
+}
+.btn-primary:active { transform: translateY(1px); box-shadow: none }
+.btn-primary:disabled { opacity: 0.4; cursor: not-allowed; transform: none; box-shadow: none }
+.btn-primary .arrow { transition: transform 0.2s }
+.btn-primary:hover .arrow { transform: translateX(3px) }
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 52px;
+  padding: 0 28px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: transparent;
+  color: var(--fg);
+  font: 600 15px/1 'Inter', sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+  transition: border-color 0.2s, background 0.2s;
+}
+.btn-secondary:hover { border-color: var(--fg-dim); background: var(--surface) }
+
+/* ── DIVIDER ── */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border) 20%, var(--border) 80%, transparent);
+  margin: 0;
+}
+
+/* ── EYEBROW ── */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font: 700 10px/1 'Inter', sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+.eyebrow::before {
+  content: '';
+  width: 20px; height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+/* ── METHOD SECTION ── */
+.method { text-align: center }
+.method h2 {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: clamp(32px, 6.5vw, 48px);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.3px;
+  margin-bottom: 16px;
+  text-wrap: balance;
+}
+.method-lead {
+  font-size: clamp(15px, 3vw, 17px);
+  line-height: 1.65;
+  color: var(--fg-muted);
+  max-width: 460px;
+  margin: 0 auto 56px;
+}
+.method-grid {
+  display: grid;
+  gap: 16px;
+}
+.method-card {
+  position: relative;
+  padding: 36px 28px 32px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  text-align: left;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.method-card:hover {
+  border-color: var(--border-accent);
+  box-shadow: 0 8px 40px var(--accent-glow);
+}
+.method-card .step-num {
+  font: 500 12px 'JetBrains Mono', monospace;
+  color: var(--accent);
+  margin-bottom: 14px;
+  display: block;
+}
+.method-card h3 {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: 26px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.method-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--fg-muted);
+}
+
+/* ── RESULTS ── */
+.results { text-align: center }
+.results h2 {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: clamp(32px, 6.5vw, 48px);
+  font-weight: 400;
+  line-height: 1.08;
+  margin-bottom: 48px;
+  text-wrap: balance;
+}
+.gallery-track {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  overscroll-behavior-inline: contain;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-bottom: 4px;
+}
+.gallery-track::-webkit-scrollbar { display: none }
+.gallery-slide {
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--surface);
+  aspect-ratio: 4/3;
+  display: grid;
+  place-items: center;
+  padding: 8px;
+}
+.gallery-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: calc(var(--radius-md) - 6px);
+}
+.gallery-nav {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+.gallery-nav button {
+  width: 8px; height: 8px;
+  padding: 0; border: 0;
+  border-radius: 50%;
+  background: var(--border);
+  cursor: pointer;
+  transition: all 0.25s;
+}
+.gallery-nav button.active {
+  width: 28px;
+  border-radius: 8px;
+  background: var(--accent);
+}
+
+/* ── CTA ── */
+.cta-section {
+  text-align: center;
+  padding: 80px 0 40px;
+}
+.cta-section h2 {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: clamp(32px, 7vw, 52px);
+  font-weight: 400;
+  line-height: 1.06;
+  margin-bottom: 20px;
+  text-wrap: balance;
+}
+.cta-section h2 em { font-style: italic; color: var(--accent) }
+.cta-section p {
+  font-size: clamp(15px, 3vw, 17px);
+  line-height: 1.65;
+  color: var(--fg-muted);
+  max-width: 500px;
+  margin: 0 auto 44px;
+}
+
+/* ── FOOTER ── */
+.site-footer {
+  padding: 48px 0 32px;
+  border-top: 1px solid var(--border);
+}
+.footer-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+.footer-name {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: 28px;
+}
+.footer-links {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.footer-links button {
+  border: 0; background: transparent;
+  color: var(--fg-muted);
+  font: 500 14px 'Inter', sans-serif;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: transparent;
+  transition: text-decoration-color 0.2s;
+}
+.footer-links button:hover { text-decoration-color: var(--fg-muted) }
+.footer-disclaimer {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--fg-dim);
+  margin-bottom: 20px;
+}
+.footer-legal {
+  font-size: 12px;
+  color: var(--fg-dim);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+}
+
+/* ── JOURNEY FLOW ── */
+.journey-page {
+  max-width: 560px;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 24px 0 48px;
+}
+.journey-page[hidden] { display: none }
+.page[hidden] { display: none }
+.journey-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+.journey-brand {
+  font: 700 11px/1 'Inter', sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+.back-btn {
+  background: transparent; border: 0;
+  color: var(--fg-muted);
+  font: 500 14px 'Inter', sans-serif;
+  cursor: pointer;
+  display: flex; align-items: center; gap: 6px;
+  transition: color 0.2s;
+}
+.back-btn:hover { color: var(--fg) }
+.progress-bar {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 40px;
+}
+.progress-bar span {
+  height: 3px;
+  flex: 1;
+  background: var(--border);
+  border-radius: 4px;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+.progress-bar span.active {
+  background: var(--accent);
+  box-shadow: 0 0 10px var(--accent-glow);
+}
+
+.journey-step { display: none; animation: step-in 0.25s ease }
+.journey-step.active { display: block }
+@keyframes step-in { from { opacity: 0; transform: translateY(6px) } to { opacity: 1; transform: none } }
+
+.journey-kicker {
+  font: 700 10px/1 'Inter', sans-serif;
+  letter-spacing: 3px;
+  color: var(--accent);
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 12px;
+}
+.journey-step h1 {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: clamp(34px, 7vw, 46px);
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.08;
+  margin: 0 auto 12px;
+  max-width: 420px;
+  text-wrap: balance;
+}
+.journey-intro {
+  font-size: 15px;
+  line-height: 1.55;
+  text-align: center;
+  color: var(--fg-muted);
+  max-width: 380px;
+  margin: 0 auto 28px;
+}
+.choice-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 20px 0;
+}
+.choice-card {
+  padding: 24px 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  color: var(--fg);
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+.choice-card:hover { border-color: var(--fg-dim) }
+.choice-card strong {
+  display: block;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+.choice-card span {
+  font-size: 13px;
+  color: var(--fg-muted);
+  line-height: 1.45;
+}
+.choice-card.selected {
+  border-color: var(--accent);
+  background: var(--accent-glow);
+  box-shadow: 0 0 0 1px var(--border-accent), 0 8px 28px var(--accent-glow);
+}
+.journey-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+.journey-actions .btn-primary,
+.journey-actions .btn-secondary {
+  flex: 0 1 320px;
+  max-width: 100%;
+}
+
+/* ── FORM ── */
+.selected-summary {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  font-size: 14px;
+  color: var(--fg-muted);
+  margin: 16px 0;
+  background: var(--surface);
+}
+.field-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.field { display: grid; gap: 6px }
+.field.full { grid-column: 1 / -1 }
+.field label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--fg-muted);
+}
+.field input {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  color: var(--fg);
+  padding: 14px;
+  font: 15px 'Inter', sans-serif;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.field input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+.consents {
+  display: grid;
+  gap: 12px;
+  margin: 20px 0;
+}
+.consents label {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: 13px;
+  color: var(--fg-muted);
+  line-height: 1.45;
+  cursor: pointer;
+}
+.consents input[type="checkbox"] {
+  accent-color: var(--accent);
+  width: 17px; height: 17px;
+  flex: 0 0 17px;
+  margin-top: 1px;
+}
+.consent-text { flex: 1; min-width: 0; text-align: left }
+.contract-link {
+  display: inline;
+  border: 0; background: transparent;
+  color: var(--accent-light);
+  font: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Plan picker */
+.plan-picker { grid-column: 1 / -1; border: 0; padding: 0; margin: 0 0 10px }
+.plan-picker legend { font-size: 13px; font-weight: 500; color: var(--fg-muted); margin-bottom: 12px }
+.plan-options { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px }
+.plan-option { position: relative; cursor: pointer }
+.plan-option input { position: absolute; opacity: 0; pointer-events: none }
+.plan-card {
+  height: 100%; min-height: 180px;
+  display: flex; flex-direction: column;
+  padding: 18px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.plan-name {
+  font: 400 24px 'Instrument Serif', Georgia, serif;
+  color: var(--fg);
+}
+.plan-price {
+  font-size: 18px; font-weight: 800;
+  color: var(--accent);
+  margin: 4px 0 8px;
+}
+.plan-duration {
+  display: block;
+  color: var(--success);
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.plan-description {
+  color: var(--fg-dim);
+  font-size: 12px;
+  line-height: 1.45;
+}
+.plan-option input:checked + .plan-card {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--border-accent), 0 8px 28px var(--accent-glow);
+}
+.plan-option:nth-child(2)::after {
+  content: 'Il più scelto';
+  position: absolute; z-index: 1;
+  top: 10px; right: 10px;
+  padding: 4px 8px;
+  border-radius: 100px;
+  background: var(--accent);
+  color: #0a0a08;
+  font-size: 9px; font-weight: 800;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+/* Success */
+.success-panel { text-align: center; padding: 60px 10px }
+.success-mark {
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  display: grid; place-items: center;
+  margin: 0 auto 20px;
+  background: var(--accent-glow);
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  font-size: 28px;
+}
+.success-panel p { font-size: 15px; color: var(--fg-muted); line-height: 1.55 }
+
+/* Modal */
+.contract-modal {
+  position: fixed; inset: 0; z-index: 100;
+  display: grid; place-items: center; padding: 18px;
+  background: #0a0a08d8;
+  backdrop-filter: blur(8px);
+}
+.contract-modal[hidden] { display: none }
+.contract-dialog {
+  width: min(680px, 100%);
+  max-height: 85vh;
+  display: flex; flex-direction: column;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  box-shadow: 0 24px 60px #00000040;
+}
+.contract-modal-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px 22px;
+  border-bottom: 1px solid var(--border);
+}
+.contract-modal-header h2 { font-size: 18px; font-weight: 600; margin: 0 }
+.contract-close {
+  width: 32px; height: 32px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--bg);
+  color: var(--fg);
+  font-size: 18px;
+  cursor: pointer;
+  display: grid; place-items: center;
+}
+.contract-body {
+  white-space: pre-wrap;
+  overflow: auto; padding: 22px 24px;
+  font-size: 13px; line-height: 1.75;
+  color: var(--fg-muted);
+  background: var(--bg);
+}
+.contract-footer-bar {
+  padding: 14px 22px;
+  border-top: 1px solid var(--border);
+  text-align: right;
+}
+.contract-footer-bar .btn-primary {
+  width: auto; min-height: 40px; font-size: 13px;
+  padding: 0 20px; border-radius: var(--radius-sm);
+}
+
+/* Activation plan step */
+.activation-plan-step h1 { margin-bottom: 12px }
+.activation-plan-options { display: grid; gap: 10px; margin: 24px 0 22px }
+.activation-plan-option { position: relative; display: block; cursor: pointer }
+.activation-plan-input { position: absolute; opacity: 0; pointer-events: none }
+.activation-plan-option .plan-card {
+  min-height: 80px;
+  display: grid; grid-template-columns: 1fr auto; grid-template-rows: auto auto;
+  gap: 3px 12px; padding: 16px; border-radius: var(--radius-md);
+}
+.activation-plan-option .plan-name { font-size: 22px; grid-column: 1 }
+.activation-plan-option .plan-price { font-size: 16px; grid-column: 2; grid-row: 1 }
+.activation-plan-option .plan-description { grid-column: 1 / -1; font-size: 12px }
+.activation-plan-input:checked + .plan-card {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--border-accent), 0 8px 28px var(--accent-glow);
+}
+.activation-note { text-align: center; color: var(--fg-dim); font-size: 11px; margin: 14px 0 0 }
+.activation-plan-step .journey-actions { margin-top: 18px }
+#contractForm .plan-picker { display: none !important }
+.journey-page.activation-selection > .journey-step:not(.activation-plan-step) { display: none !important }
+
+@media (max-width: 520px) {
+  .choice-grid, .field-grid { grid-template-columns: 1fr }
+  .plan-options { grid-template-columns: 1fr }
+  .plan-card { min-height: 0 }
+  .journey-actions { flex-direction: column; align-items: center }
+  .journey-actions .btn-primary,
+  .journey-actions .btn-secondary { flex: none; width: min(100%, 320px) }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important }
+}
+</style>
+
+<main class="page" id="mainPage">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="brand-bar">
+      <div>
+        <div class="brand-name">Mattia La Tona</div>
+        <div class="brand-role">Business Consultant</div>
+      </div>
+    </div>
+    <div class="availability-badge">
+      <span class="pulse-dot"></span>
+      Disponibile per nuovi clienti
+    </div>
+    <h1 class="serif">Scopri dove intervenire per <em>crescere meglio</em></h1>
+    <p class="hero-sub">Richiedi una valutazione gratuita della tua situazione. Individuerò i principali punti di blocco e le aree su cui intervenire per migliorare il tuo business. Senza impegno.</p>
+    <button class="btn-primary start-path" type="button" data-flow="evaluation">Valutazione Gratuita <span class="arrow">&rarr;</span></button>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- METHOD -->
+  <section class="method section">
+    <div class="eyebrow">Il metodo</div>
+    <h2 class="serif">Un metodo strutturato per capire dove intervenire</h2>
+    <p class="method-lead">Un percorso privato per chi vuole andare più lontano, più veloce e con più chiarezza.</p>
+    <div class="method-grid">
+      <div class="method-card">
+        <span class="step-num mono">01</span>
+        <h3 class="serif">Analisi</h3>
+        <p>Mettiamo ordine: obiettivi, offerta, posizionamento e punti deboli del business.</p>
+      </div>
+      <div class="method-card">
+        <span class="step-num mono">02</span>
+        <h3 class="serif">Crescita</h3>
+        <p>Costruiamo una strategia chiara per migliorare vendite, conversioni e direzione.</p>
+      </div>
+      <div class="method-card">
+        <span class="step-num mono">03</span>
+        <h3 class="serif">Ottimizzazione</h3>
+        <p>Monitoriamo i numeri e correggiamo ciò che rallenta il potenziale della tua attività.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- RESULTS -->
+  <section class="results section">
+    <div class="eyebrow">Risultati</div>
+    <h2 class="serif">Alcuni risultati dei miei clienti</h2>
+    <div class="gallery-track" id="resultsGallery" aria-label="Galleria dei risultati">
+      <div class="gallery-slide"><img src="assets/result-01.jpg" alt="Risultato cliente: pagamento ricevuto" loading="lazy"></div>
+      <div class="gallery-slide"><img src="assets/result-02.jpg" alt="Risultato cliente: vendite Shopify" loading="lazy"></div>
+      <div class="gallery-slide"><img src="assets/result-03.jpg" alt="Risultato cliente: saldo disponibile" loading="lazy"></div>
+      <div class="gallery-slide"><img src="assets/result-04-redacted.png" alt="Risultato cliente: pagamenti Stripe" loading="lazy"></div>
+      <div class="gallery-slide"><img src="assets/result-05-redacted.png" alt="Risultato cliente: pagamento ricevuto" loading="lazy"></div>
+    </div>
+    <div class="gallery-nav" aria-label="Posizione nella galleria">
+      <button class="active" type="button" aria-label="Vai all'immagine 1"></button>
+      <button type="button" aria-label="Vai all'immagine 2"></button>
+      <button type="button" aria-label="Vai all'immagine 3"></button>
+      <button type="button" aria-label="Vai all'immagine 4"></button>
+      <button type="button" aria-label="Vai all'immagine 5"></button>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="eyebrow">Inizia ora</div>
+    <h2 class="serif">Pronto a <em>trasformare</em> il tuo business?</h2>
+    <p>Se vuoi smettere di procedere per tentativi e costruire una strategia concreta, è il momento di passare all'azione. Lavoreremo insieme sui punti che bloccano la crescita per trasformare i tuoi obiettivi in risultati misurabili e sostenibili.</p>
+    <button class="btn-primary start-path activation-cta" type="button" data-flow="activation">Attiva Piano <span class="arrow">&rarr;</span></button>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-name serif">Mattia La Tona</div>
+      <div class="footer-links">
+        <button type="button" id="footerPrivacy">Privacy Policy</button>
+      </div>
+    </div>
+    <p class="footer-disclaimer">Disclaimer: le informazioni presenti in questo sito hanno finalità informative. I risultati possono variare in base al business, al mercato e all'esecuzione del percorso.</p>
+    <div class="footer-legal">
+      <span>Mattia La Tona &mdash; P. Iva 18677661003</span>
+      <span>&copy; Mattia La Tona</span>
+    </div>
+  </footer>
+</main>
+
+<!-- JOURNEY FLOW -->
+<main class="journey-page" id="journey" hidden>
+  <div class="journey-header">
+    <div class="journey-brand">Mattia La Tona</div>
+    <button class="back-btn" type="button" id="backToSite">&larr; Torna al sito</button>
+  </div>
+  <div class="progress-bar" aria-label="Avanzamento">
+    <span class="active"></span><span></span><span></span>
+  </div>
+
+  <section class="journey-step active" data-step="1">
+    <div class="journey-kicker" id="flowKicker">VALUTAZIONE GRATUITA</div>
+    <h1 id="flowQuestion">Hai già un business avviato?</h1>
+    <p class="journey-intro" id="flowQuestionIntro">Questa informazione mi aiuta a comprendere il tuo punto di partenza e rendere la valutazione più precisa.</p>
+    <div class="choice-grid">
+      <button class="choice-card" type="button" data-business="si">
+        <strong>Sì</strong>
+        <span id="yesDescription">Ho già un'attività e voglio individuare cosa ne limita la crescita.</span>
+      </button>
+      <button class="choice-card" type="button" data-business="no">
+        <strong>No</strong>
+        <span id="noDescription">Parto da un'idea e voglio capire come costruirla nel modo giusto.</span>
+      </button>
+    </div>
+    <div class="journey-actions">
+      <button class="btn-primary" type="button" id="questionNext" disabled>Continua <span class="arrow">&rarr;</span></button>
+    </div>
+  </section>
+
+  <section class="journey-step" data-step="2">
+    <div class="journey-kicker">ULTIMO PASSO</div>
+    <h1 id="flowFormTitle">Richiedi la valutazione gratuita</h1>
+    <p class="journey-intro" id="flowFormIntro">Lascia i tuoi dati per ricevere una prima valutazione della tua situazione, senza impegno.</p>
+    <div class="selected-summary" id="selectedSummary"></div>
+    <form class="journey-form" id="contractForm">
+      <div class="field-grid">
+        <fieldset class="plan-picker" data-activation-only hidden>
+          <legend>Scegli il piano *</legend>
+          <div class="plan-options">
+            <label class="plan-option"><input type="radio" name="piano" value="Basic €497" data-plan="Basic" data-duration="30" data-price="€497,00" data-activation-required><span class="plan-card"><span class="plan-name">Basic</span><span class="plan-price">€497</span><strong class="plan-duration">30 giorni di affiancamento</strong><span class="plan-description">Per impostare le basi, chiarire le priorità e intervenire sui blocchi principali.</span></span></label>
+            <label class="plan-option"><input type="radio" name="piano" value="Pro €997" data-plan="Pro" data-duration="80" data-price="€997,00" data-activation-required><span class="plan-card"><span class="plan-name">Pro</span><span class="plan-price">€997</span><strong class="plan-duration">80 giorni di affiancamento</strong><span class="plan-description">Per sviluppare una strategia completa e accompagnarne concretamente l'esecuzione.</span></span></label>
+            <label class="plan-option"><input type="radio" name="piano" value="Plus €1.997" data-plan="Plus" data-duration="140" data-price="€1.997,00" data-activation-required><span class="plan-card"><span class="plan-name">Plus</span><span class="plan-price">€1.997</span><strong class="plan-duration">140 giorni di affiancamento</strong><span class="plan-description">Per un supporto profondo, continuativo e orientato alla crescita del business.</span></span></label>
+          </div>
+        </fieldset>
+        <div class="field"><label for="firstName">Nome *</label><input id="firstName" name="nome" required autocomplete="given-name"></div>
+        <div class="field"><label for="lastName">Cognome *</label><input id="lastName" name="cognome" required autocomplete="family-name"></div>
+        <div class="field full"><label for="email">Email *</label><input id="email" name="email" type="email" required autocomplete="email"></div>
+        <div class="field full" data-activation-only hidden><label for="taxId">Codice fiscale o Partita IVA *</label><input id="taxId" name="codiceFiscalePartitaIva" data-activation-required autocomplete="off"></div>
+        <div class="field full" data-activation-only hidden><label for="homeAddress">Indirizzo di casa *</label><input id="homeAddress" name="indirizzoCasa" data-activation-required autocomplete="street-address"></div>
+      </div>
+      <div class="consents">
+        <label><input type="checkbox" required><span class="consent-text">Ho preso visione dell'<button class="contract-link" id="openPrivacy" type="button">informativa privacy</button>.</span></label>
+        <label data-activation-only hidden><input type="checkbox" name="contrattoAccettato" data-activation-required><span class="consent-text">Ho letto e accetto il <button class="contract-link" id="openContract" type="button">contratto di Business Consulting</button>.</span></label>
+      </div>
+      <div class="journey-actions">
+        <button class="btn-secondary" type="button" data-back="1">&larr; Indietro</button>
+        <button class="btn-primary" id="flowSubmit" type="submit">Richiedi la valutazione <span class="arrow">&rarr;</span></button>
+      </div>
+    </form>
+  </section>
+
+  <section class="journey-step success-panel" data-step="3">
+    <div class="success-mark">&#10003;</div>
+    <div class="journey-kicker">RICHIESTA INVIATA</div>
+    <h1 id="flowSuccessTitle">La tua valutazione è stata richiesta.</h1>
+    <p id="flowSuccessText">Abbiamo ricevuto i tuoi dati. Ti contatterò a breve per approfondire la tua situazione e individuare i principali punti su cui intervenire.</p>
+    <div class="journey-actions">
+      <button class="btn-primary" type="button" id="finishJourney">Torna al sito <span class="arrow">&rarr;</span></button>
+    </div>
+  </section>
+</main>
+
+<!-- LEGAL MODAL -->
+<div class="contract-modal" id="contractModal" hidden aria-labelledby="contractTitle" role="dialog" aria-modal="true">
+  <div class="contract-dialog">
+    <div class="contract-modal-header">
+      <h2 id="contractTitle">Informativa Privacy</h2>
+      <button class="contract-close" type="button" id="closeContract" aria-label="Chiudi">&times;</button>
+    </div>
+    <div class="contract-body" id="contractText">Caricamento...</div>
+    <div class="contract-footer-bar">
+      <button class="btn-primary" type="button" id="contractOk">Ho letto</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const landing = document.querySelector('#mainPage');
+const journey = document.querySelector('#journey');
+const steps = [...document.querySelectorAll('.journey-step')];
+const progress = [...document.querySelectorAll('.progress-bar span')];
+let business = '', activeFlow = 'evaluation';
+
+const flowCopy = {
+  evaluation: {
+    kicker: 'VALUTAZIONE GRATUITA',
+    question: 'Hai già un business avviato?',
+    questionIntro: 'Questa informazione mi aiuta a comprendere il tuo punto di partenza e rendere la valutazione più precisa.',
+    yes: 'Ho già un’attività e voglio individuare cosa ne limita la crescita.',
+    no: 'Parto da un’idea e voglio capire come costruirla nel modo giusto.',
+    formTitle: 'Richiedi la valutazione gratuita',
+    formIntro: 'Lascia i tuoi dati per ricevere una prima valutazione della tua situazione, senza impegno.',
+    submit: 'Richiedi la valutazione',
+    successTitle: 'La tua valutazione è stata richiesta.',
+    successText: 'Abbiamo ricevuto i tuoi dati. Ti contatterò a breve per approfondire la tua situazione e individuare i principali punti su cui intervenire.'
+  },
+  activation: {
+    kicker: 'ATTIVA IL PIANO',
+    question: 'Hai già un business avviato?',
+    questionIntro: 'Questa informazione mi aiuta a comprendere il tuo punto di partenza e scegliere il Piano d’Azione più adatto.',
+    yes: 'Ho già un’attività e voglio sbloccarne la crescita con un piano concreto.',
+    no: 'Parto da un’idea e voglio costruire il mio business su basi solide.',
+    formTitle: 'Attiva il tuo Piano d’Azione',
+    formIntro: 'Scegli il Piano d’Azione più adatto ai tuoi obiettivi e lascia i tuoi dati per richiederlo.',
+    submit: 'Richiedi il Piano d’Azione',
+    successTitle: 'Richiesta del Piano d’Azione ricevuta.',
+    successText: 'Abbiamo ricevuto i tuoi dati. Ti contatterò a breve per definire insieme il piano e i prossimi passaggi.'
+  }
+};
+
+function applyFlowContent() {
+  const copy = flowCopy[activeFlow];
+  const isActivation = activeFlow === 'activation';
+  document.querySelector('#flowKicker').textContent = copy.kicker;
+  document.querySelector('#flowQuestion').textContent = copy.question;
+  document.querySelector('#flowQuestionIntro').textContent = copy.questionIntro;
+  document.querySelector('#yesDescription').textContent = copy.yes;
+  document.querySelector('#noDescription').textContent = copy.no;
+  document.querySelector('#flowFormTitle').textContent = copy.formTitle;
+  document.querySelector('#flowFormIntro').textContent = copy.formIntro;
+  document.querySelector('#flowSubmit').textContent = copy.submit;
+  document.querySelector('#flowSuccessTitle').textContent = copy.successTitle;
+  document.querySelector('#flowSuccessText').textContent = copy.successText;
+  document.querySelectorAll('[data-activation-only]').forEach(el => el.hidden = !isActivation);
+  document.querySelectorAll('[data-activation-required]').forEach(el => el.required = isActivation);
+}
+
+function goStep(step) {
+  steps.forEach(el => el.classList.toggle('active', Number(el.dataset.step) === step));
+  progress.forEach((el, i) => el.classList.toggle('active', i < Math.min(step, 2)));
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function openJourney(event) {
+  activeFlow = event?.currentTarget?.dataset.flow || activeFlow;
+  business = '';
+  document.querySelectorAll('[data-business]').forEach(card => card.classList.remove('selected'));
+  document.querySelector('#questionNext').disabled = true;
+  applyFlowContent();
+  landing.hidden = true;
+  journey.hidden = false;
+  history.replaceState(null, '', '#attiva-percorso');
+  if (activeFlow === 'activation') {
+    document.querySelector('#selectedSummary').textContent = 'Piano d’Azione · Attiva il tuo Piano';
+    goStep(2);
+  } else {
+    goStep(1);
+  }
+}
+
+function closeJourney() {
+  journey.hidden = true;
+  landing.hidden = false;
+  history.replaceState(null, '', location.pathname);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+document.querySelectorAll('.start-path').forEach(btn => btn.addEventListener('click', event => {
+  if (event.currentTarget.dataset.flow === 'evaluation') {
+    window.location.href = 'business-conversion-audit.html';
+    return;
+  }
+  openJourney(event);
+}));
+
+document.querySelector('#backToSite').addEventListener('click', closeJourney);
+document.querySelector('#finishJourney').addEventListener('click', closeJourney);
+
+document.querySelectorAll('[data-business]').forEach(btn => btn.addEventListener('click', () => {
+  business = btn.dataset.business;
+  document.querySelectorAll('[data-business]').forEach(card => card.classList.toggle('selected', card === btn));
+  document.querySelector('#questionNext').disabled = false;
+}));
+
+document.querySelector('#questionNext').addEventListener('click', () => {
+  const requestLabel = activeFlow === 'activation' ? 'Attivazione percorso' : 'Valutazione gratuita';
+  document.querySelector('#selectedSummary').textContent = `${requestLabel} · Business ${business === 'si' ? 'già avviato' : 'da avviare'}`;
+  goStep(2);
+});
+
+document.querySelectorAll('[data-back]').forEach(btn => btn.addEventListener('click', () => goStep(Number(btn.dataset.back))));
+
+// Legal modal
+const contractModal = document.querySelector('#contractModal');
+const contractText = document.querySelector('#contractText');
+const contractTitle = document.querySelector('#contractTitle');
+const legalCache = {};
+
+async function openLegalModal(event, title, path, transform = t => t) {
+  event.preventDefault();
+  event.stopPropagation();
+  contractTitle.textContent = title;
+  contractModal.hidden = false;
+  if (legalCache[path]) { contractText.textContent = transform(legalCache[path]); return; }
+  contractText.textContent = 'Caricamento...';
+  try {
+    const response = await fetch(path);
+    legalCache[path] = await response.text();
+    contractText.textContent = transform(legalCache[path]);
+  } catch (error) {
+    contractText.textContent = 'Non è stato possibile caricare il documento. Riprova tra qualche istante.';
+  }
+}
+
+function closeContractModal() { contractModal.hidden = true; }
+
+const planInputs = [...document.querySelectorAll('input[name="piano"]')];
+const contractConsent = document.querySelector('input[name="contrattoAccettato"]');
+
+function renderContract(template, plan) {
+  return template
+    .replaceAll('{{PIANO}}', plan.dataset.plan)
+    .replaceAll('{{DURATA}}', plan.dataset.duration)
+    .replaceAll('{{PREZZO}}', plan.dataset.price);
+}
+
+planInputs.forEach(input => input.addEventListener('change', () => { if (contractConsent) contractConsent.checked = false; }));
+
+document.querySelector('#openPrivacy').addEventListener('click', event => openLegalModal(event, 'Informativa Privacy', '/informativa-privacy.txt'));
+document.querySelector('#openContract').addEventListener('click', event => {
+  const plan = document.querySelector('input[name="piano"]:checked');
+  if (!plan) { event.preventDefault(); document.querySelector('.plan-picker').scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+  openLegalModal(event, `Contratto Business Consulting · Piano ${plan.dataset.plan}`, '/contratto-business-consulting.txt', template => renderContract(template, plan));
+});
+document.querySelector('#footerPrivacy').addEventListener('click', event => openLegalModal(event, 'Informativa Privacy', '/informativa-privacy.txt'));
+document.querySelector('#closeContract').addEventListener('click', closeContractModal);
+document.querySelector('#contractOk').addEventListener('click', closeContractModal);
+contractModal.addEventListener('click', event => { if (event.target === contractModal) closeContractModal(); });
+document.addEventListener('keydown', event => { if (event.key === 'Escape' && !contractModal.hidden) closeContractModal(); });
+
+// Gallery
+const resultsGallery = document.querySelector('#resultsGallery');
+const galleryDots = [...document.querySelectorAll('.gallery-nav button')];
+let galleryFrame;
+function syncGalleryDots() {
+  const step = resultsGallery.clientWidth + 14;
+  const active = Math.max(0, Math.min(galleryDots.length - 1, Math.round(resultsGallery.scrollLeft / step)));
+  galleryDots.forEach((dot, i) => dot.classList.toggle('active', i === active));
+}
+resultsGallery.addEventListener('scroll', () => { cancelAnimationFrame(galleryFrame); galleryFrame = requestAnimationFrame(syncGalleryDots); }, { passive: true });
+galleryDots.forEach((dot, i) => dot.addEventListener('click', () => resultsGallery.scrollTo({ left: i * (resultsGallery.clientWidth + 14), behavior: 'smooth' })));
+
+// Form submit
+document.querySelector('#contractForm').addEventListener('submit', async event => {
+  event.preventDefault();
+  const form = event.currentTarget;
+  if (!form.checkValidity()) { form.reportValidity(); return; }
+  const submitButton = form.querySelector('[type="submit"]');
+  submitButton.disabled = true;
+  submitButton.textContent = 'Invio in corso…';
+  const fields = Object.fromEntries(new FormData(form).entries());
+  try {
+    const response = await fetch('/api/requests', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ flow: activeFlow, business, ...fields, consensiAccettati: true }) });
+    if (!response.ok) throw new Error('Invio non riuscito');
+    form.reset();
+    goStep(3);
+  } catch (error) {
+    // Form submission handled by the server
+  } finally {
+    submitButton.disabled = false;
+    submitButton.textContent = flowCopy[activeFlow].submit;
+  }
+});
+
+if (location.hash === '#attiva-percorso') { activeFlow = 'activation'; openJourney(); }
+
+// Address fields patch
+const addressField = document.querySelector('#homeAddress')?.closest('.field');
+if (addressField) {
+  addressField.insertAdjacentHTML('afterend',
+    '<div class="field address-extra" data-activation-only hidden><label for="streetNumber">Numero civico *</label><input id="streetNumber" name="numeroCivico" data-activation-required autocomplete="address-line2"></div>' +
+    '<div class="field address-extra" data-activation-only hidden><label for="city">Città *</label><input id="city" name="citta" data-activation-required autocomplete="address-level2"></div>' +
+    '<div class="field address-extra" data-activation-only hidden><label for="postalCode">CAP *</label><input id="postalCode" name="cap" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" data-activation-required autocomplete="postal-code"></div>'
+  );
+}
+const activationIsOpen = activeFlow === 'activation';
+document.querySelectorAll('.address-extra').forEach(f => f.hidden = !activationIsOpen);
+document.querySelectorAll('.address-extra [data-activation-required]').forEach(i => i.required = activationIsOpen);
+
+// Action Plans override
+const actionPlans = [
+  { name: 'Action Plan 14', price: '€247', duration: 'Piano operativo di 14 giorni', deliverable: 'Analisi + piano operativo di 14 giorni' },
+  { name: 'Action Plan 30', price: '€497', duration: 'Roadmap di 30 giorni', deliverable: 'Analisi approfondita + roadmap di 30 giorni' },
+  { name: 'Action Plan 90', price: '€997', duration: 'Roadmap operativa di 90 giorni', deliverable: 'Strategia completa + roadmap operativa di 90 giorni' }
+];
+document.querySelectorAll('.plan-option').forEach((option, index) => {
+  const plan = actionPlans[index];
+  if (!plan) return;
+  const input = option.querySelector('input');
+  input.value = `${plan.name} ${plan.price}`;
+  input.dataset.plan = plan.name;
+  input.dataset.duration = '48 ore';
+  input.dataset.price = `${plan.price},00`;
+  option.querySelector('.plan-name').textContent = plan.name;
+  option.querySelector('.plan-price').textContent = plan.price;
+  option.querySelector('.plan-duration').textContent = plan.duration;
+  option.querySelector('.plan-description').textContent = plan.deliverable;
+});
+
+const openContractEl = document.querySelector('#openContract');
+if (openContractEl?.parentElement) {
+  const linkEl = openContractEl.parentElement.querySelector('.contract-link');
+  if (linkEl) linkEl.textContent = 'contratto del Piano d’Azione';
+}
+
+document.querySelector('#questionNext')?.addEventListener('click', () => {
+  if (activeFlow === 'activation') document.querySelector('#selectedSummary').textContent = `Piano d’Azione · Business ${business === 'si' ? 'già avviato' : 'da avviare'}`;
+});
+
+const actionPlanDeliverables = {
+  'Action Plan 14': 'Analisi + piano operativo di 14 giorni.',
+  'Action Plan 30': 'Analisi approfondita + roadmap di 30 giorni.',
+  'Action Plan 90': 'Strategia completa + roadmap operativa di 90 giorni.'
+};
+const baseRenderContract = renderContract;
+renderContract = (template, plan) => baseRenderContract(template, plan).replaceAll('{{DELIVERABLE}}', actionPlanDeliverables[plan.dataset.plan] || 'Il deliverable indicato nella scheda del Piano d’Azione selezionato.');
+
+const contractConsentText = document.querySelector('#openContract')?.closest('.consent-text');
+if (contractConsentText) contractConsentText.innerHTML = 'Ho letto e accetto il <span class="contract-link" id="openContractUpdated" role="button" tabindex="0">Contratto del Piano d’Azione, compresa la richiesta di avvio immediato del servizio e le condizioni relative al diritto di recesso.</span>';
+
+const openUpdatedContract = event => {
+  const plan = document.querySelector('input[name="piano"]:checked');
+  if (!plan) { event.preventDefault(); document.querySelector('.plan-picker').scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+  openLegalModal(event, `Contratto Piano d’Azione · ${plan.dataset.plan}`, '/contratto-business-consulting.txt', template => renderContract(template, plan));
+};
+document.querySelector('#openContractUpdated')?.addEventListener('click', openUpdatedContract);
+document.querySelector('#openContractUpdated')?.addEventListener('keydown', event => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); openUpdatedContract(event); } });
+
+// Activation plan step
+(() => {
+  const form = document.querySelector('#contractForm');
+  const formStep = form?.closest('.journey-step');
+  const successStep = document.querySelector('.success-panel');
+  if (!form || !formStep || !successStep) return;
+
+  const planStep = document.createElement('section');
+  planStep.className = 'journey-step activation-plan-step';
+  planStep.dataset.step = '2';
+  planStep.innerHTML = `<div class="journey-kicker">ATTIVA IL PIANO</div><h1>Quale piano fa per te?</h1><p class="journey-intro">Scegli da dove partire. Lo scrivo su misura per il tuo business.</p><div class="activation-plan-options"><label class="activation-plan-option"><input class="activation-plan-input" type="radio" name="activationPiano" data-plan="Action Plan 14"><span class="plan-card"><span class="plan-name">Action Plan 14</span><span class="plan-price">€247</span><span class="plan-description">Analisi + piano operativo di 14 giorni</span></span></label><label class="activation-plan-option"><input class="activation-plan-input" type="radio" name="activationPiano" data-plan="Action Plan 30"><span class="plan-card"><span class="plan-name">Action Plan 30</span><span class="plan-price">€497</span><span class="plan-description">Analisi approfondita + roadmap di 30 giorni</span></span></label><label class="activation-plan-option"><input class="activation-plan-input" type="radio" name="activationPiano" data-plan="Action Plan 90"><span class="plan-card"><span class="plan-name">Action Plan 90</span><span class="plan-price">€997</span><span class="plan-description">Strategia completa + roadmap operativa di 90 giorni</span></span></label></div><p class="activation-note">Nessun pagamento ora.</p>`;
+  formStep.parentNode.insertBefore(planStep, formStep);
+  steps.push(planStep);
+
+  const setSelectionMode = enabled => journey.classList.toggle('activation-selection', enabled);
+  const internalPicker = document.querySelector('.plan-picker');
+  if (internalPicker) internalPicker.hidden = true;
+
+  const originalPlans = [...document.querySelectorAll('.plan-picker input[name="piano"]')];
+  originalPlans.forEach(input => { input.required = false; input.disabled = false; });
+
+  const selectPlan = () => {
+    const selected = planStep.querySelector('.activation-plan-input:checked');
+    if (!selected) return false;
+    const matching = originalPlans.find(input => input.dataset.plan === selected.dataset.plan);
+    if (matching) { matching.checked = true; matching.required = false; }
+    document.querySelector('#selectedSummary').textContent = `${selected.dataset.plan} · ${selected.dataset.plan === 'Action Plan 14' ? '€247' : selected.dataset.plan === 'Action Plan 30' ? '€497' : '€997'}`;
+    document.querySelector('[data-back]').dataset.back = '2';
+    setSelectionMode(false);
+    steps.forEach(step => step.classList.toggle('active', step === formStep));
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    return true;
+  };
+
+  planStep.querySelectorAll('.activation-plan-input').forEach(input => input.addEventListener('change', selectPlan));
+
+  document.querySelectorAll('.start-path[data-flow="activation"]').forEach(button => button.addEventListener('click', () => { setSelectionMode(true); setTimeout(() => goStep(2), 0); }));
+
+  const showPlanStep = () => {
+    setSelectionMode(true);
+    steps.forEach(step => step.classList.toggle('active', step === planStep));
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  document.querySelector('[data-back]').addEventListener('click', event => {
+    if (activeFlow === 'activation') { event.stopImmediatePropagation(); showPlanStep(); }
+  }, true);
+
+  if (location.hash === '#attiva-percorso' && typeof activeFlow !== 'undefined' && activeFlow === 'activation') setTimeout(showPlanStep, 0);
+})();
+</script>
